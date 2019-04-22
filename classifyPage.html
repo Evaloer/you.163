@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>分类</title>
+    <link rel="stylesheet" href="css/classify.css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="head">
+            <img src="img/sous.png" alt="">
+            <p>搜索商品，共21440款好物</p>
+        </div>
+    </header>
+    <!-- section -->
+    <section>
+        <div class="list_text">
+            <ul id="list_text">
+                <li class="list_li">推荐专区</li>
+                <li>冬装专区</li>
+                <li>爆款专区</li>
+                <li>新品专区</li>
+                <li>居家生活</li>
+                <li>服饰箱包</li>
+                <li>推荐专区</li>
+                <li>冬装专区</li>
+                <li>爆款专区</li>
+                <li>新品专区</li>
+                <li>居家生活</li>
+                <li>服饰箱包</li>
+            </ul>
+        </div>
+        <div class="list_mess">
+            <div class="list_img">
+                <img src="img/classify_img00.jpg" alt="">
+            </div>
+            <div class="list_clas">
+                <div class="list_box">
+                    <img src="img/list_img001.jpg" alt="">
+                    <p>大家都在搜</p>
+                </div>
+                <div class="list_box">
+                    <img src="img/list_img002.jpg" alt="">
+                    <p>配件特惠</p>
+                </div>
+                <div class="list_box">
+                    <img src="img/list_img001.jpg" alt="">
+                    <p>大家都在搜</p>
+                </div>
+                <div class="list_box">
+                    <img src="img/list_img003.jpg" alt="">
+                    <p>配件特惠</p>
+                </div>
+                <div class="list_box">
+                    <img src="img/list_img001.jpg" alt="">
+                    <p>大家都在搜</p>
+                </div>
+                <div class="list_box">
+                    <img src="img/list_img004.jpg" alt="">
+                    <p>除霾好物</p>
+                </div>
+                <div class="list_box">
+                    <img src="img/list_img001.jpg" alt="">
+                    <p>大家都在搜</p>
+                </div>
+                <div class="list_box">
+                    <img src="img/list_img002.jpg" alt="">
+                    <p>配件特惠</p>
+                </div>
+                <div class="list_box">
+                    <img src="img/list_img004.jpg" alt="">
+                    <p>除霾好物</p>
+                </div>
+                <div class="list_box">
+                    <img src="img/list_img003.jpg" alt="">
+                    <p>配件特惠</p>
+                </div>
+                <div class="list_box">
+                    <img src="img/list_img001.jpg" alt="">
+                    <p>大家都在搜</p>
+                </div>
+                <div class="list_box">
+                    <img src="img/list_img002.jpg" alt="">
+                    <p>大家都在搜</p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="list_mess list_messB">
+                <div class="list_img">
+                    <img src="img/classify_img00.jpg" alt="">
+                </div>
+                <div class="list_clas">
+                    <div class="list_box">
+                        <img src="img/list_img001.jpg" alt="">
+                        <p>大家都在搜</p>
+                    </div>
+                    <div class="list_box">
+                        <img src="img/list_img002.jpg" alt="">
+                        <p>配件特惠</p>
+                    </div>
+                    <div class="list_box">
+                        <img src="img/list_img001.jpg" alt="">
+                        <p>大家都在搜</p>
+                    </div>
+                    <div class="list_box">
+                        <img src="img/list_img003.jpg" alt="">
+                        <p>配件特惠</p>
+                    </div>
+                    <div class="list_box">
+                        <img src="img/list_img001.jpg" alt="">
+                        <p>大家都在搜</p>
+                    </div>
+                    <div class="list_box">
+                        <img src="img/list_img004.jpg" alt="">
+                        <p>除霾好物</p>
+                    </div>
+                    <div class="list_box">
+                        <img src="img/list_img001.jpg" alt="">
+                        <p>大家都在搜</p>
+                    </div>
+                    <div class="list_box">
+                        <img src="img/list_img002.jpg" alt="">
+                        <p>配件特惠</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+     <!-- footer -->
+     <footer>
+            <a href="youPage.html"><img src="img/home_shop.png" alt=""><span>首页</span></a>
+            <a><img src="img/class_icon_02.png" alt=""><span class="foot_a">分类</span></a>
+            <a href="find.html"><img src="img/icon_03.png" alt=""><span>识物</span></a>
+            <a href="shopPage.html"><img src="img/icon_04.png" alt=""><span>购物车</span></a>
+            <a href="youLogin.html"><img src="img/icon_05.png" alt=""><span>个人</span></a>
+        </footer>
+</body>
+</html>
+<script type="text/javascript">
+window.onload = function(){
+    var arr = $("#list_text").children;
+        for(let i=0;i<arr.length;i++){
+            arr[i].onclick=()=>{
+                for(let j=0;j<arr.length;j++){
+                    if(arr[j].getAttribute("class")=="list_li"){
+                        arr[j].setAttribute("class","");
+                    }
+                }
+                        arr[i].setAttribute("class","list_li");
+            }
+        }
+    }
+
+function $(str){
+            if(str.charAt(0)=="#"){
+                    return document.getElementById(str.substring(1));
+            }else if(str.charAt(0)=="."){
+                    return document.getElementsByClassName(str.substring(1));
+            }else{
+                    return document.getElementsByTagName(str);
+            }
+    }
+
+</script>
